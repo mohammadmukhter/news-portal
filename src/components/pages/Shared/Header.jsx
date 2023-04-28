@@ -1,5 +1,6 @@
 import React from "react";
 
+import moment from "moment";
 const Header = () => {
   return (
     <div className="text-center">
@@ -8,7 +9,7 @@ const Header = () => {
         <small>Journalism Without Fear or Favour</small>
       </div>
       <div>
-        <small>Sunday, November 27, 2022</small>
+        <small>{moment().format("LLLL")}</small>
       </div>
     </div>
   );
