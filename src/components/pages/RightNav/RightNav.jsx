@@ -14,7 +14,7 @@ import QZone from "../RightNav/QZone";
 const RightNav = () => {
   return (
     <div>
-      <div>
+      <div className="my-4">
         <h6>Login with</h6>
         <div className="border p-1 text-center mb-1">
           <Link className="text-decoration-none">
@@ -52,6 +52,7 @@ const RightNav = () => {
       </div>
 
       <QZone></QZone>
+
       <div className="my-4">
         <Card className="bg-dark text-white">
           <Card.Img src={adImage} alt="Card image" />

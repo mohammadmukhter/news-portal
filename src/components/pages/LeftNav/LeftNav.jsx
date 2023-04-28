@@ -1,9 +1,10 @@
 import React from "react";
+import Categories from "../Categories/Categories";
 
 const LeftNav = () => {
   return (
     <div>
-      <h2>This is Left Navigation</h2>
+      <Categories></Categories>
     </div>
   );
 };
