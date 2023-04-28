@@ -1,8 +1,6 @@
-import { createBrowserRouter } from "react-router-dom";
+import { Navigate, createBrowserRouter } from "react-router-dom";
 import Main from "../components/Layouts/Main";
-import Home from "../components/pages/Home/Home";
-import Login from "../components/pages/Login/Login";
-import Register from "../components/pages/Login/Register";
+import Category from "../components/pages/Category/Category";
 
 const router = createBrowserRouter([
   {
@@ -11,15 +9,19 @@ const router = createBrowserRouter([
     children: [
       {
         path: "/",
-        element: <Home></Home>,
+        element: <Navigate to="/categories/0"></Navigate>,
       },
+    ],
+  },
+  {
+    path: "/categories",
+    element: <Main></Main>,
+    children: [
       {
-        path: "login",
-        element: <Login></Login>,
-      },
-      {
-        path: "register",
-        element: <Register></Register>,
+        path: ":id",
+        element: <Category></Category>,
+        loader: ({ params }) =>
+          fetch(`http://localhost:5000/categories/${params.id}`),
       },
     ],
   },

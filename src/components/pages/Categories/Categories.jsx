@@ -16,7 +16,7 @@ const Categories = () => {
     };
     dataFetch();
   }, []);
-  console.log(categories);
+  //   console.log(categories);
 
   return (
     <div className="my-4">
@@ -24,6 +24,7 @@ const Categories = () => {
       <ListGroup variant="flush">
         {categories.map((data) => (
           <Link
+            to={`/categories/${data.id}`}
             className="text-decoration-none text-secondary ps-2 mb-3"
             key={data.id}
           >
