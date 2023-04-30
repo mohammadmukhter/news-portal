@@ -59,7 +59,7 @@ const NewsCard = ({ news }) => {
               <Card.Img variant="top" src={image_url} />
               <Card.Text>
                 {details.length > 250 ? details.slice(1, 250) : details}...
-                <Link to={`news/${_id}`}>Read More</Link>
+                <Link to={`/news/${_id}`}>Read More</Link>
               </Card.Text>
             </Card.Body>
             <Card.Footer className="text-muted">
