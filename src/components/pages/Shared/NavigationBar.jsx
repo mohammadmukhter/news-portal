@@ -12,16 +12,16 @@ const NavigationBar = () => {
           <Link className=" text-decoration-none" to="/">
             Home
           </Link>
-          <Link className=" text-decoration-none" to="/about">
+          <Link className=" text-decoration-none" to="">
             About
           </Link>
-          <Link className=" text-decoration-none" to="/news">
+          <Link className=" text-decoration-none" to="">
             News
           </Link>
-          <Link className=" text-decoration-none" to="/contact">
+          <Link className=" text-decoration-none" to="">
             Contact
           </Link>
-          <Link className=" text-decoration-none" to="/career">
+          <Link className=" text-decoration-none" to="">
             Career
           </Link>
         </Nav>
@@ -29,7 +29,9 @@ const NavigationBar = () => {
           <Link>
             <FaUserCircle className="fs-4 text-dark" />
           </Link>
-          <Link className="btn btn-dark ms-2">Login</Link>
+          <Link to="/login" className="btn btn-dark ms-2">
+            Login
+          </Link>
         </div>
       </Container>
     </Navbar>
